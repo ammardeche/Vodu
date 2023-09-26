@@ -10,20 +10,22 @@ import { IData } from '../Models/data';
 })
 export class ParentComponent {
 
- 
-  data : IData[] = [];
 
-  constructor( private http : HttpClient , private dataServ : DataServiceService  ){
-   
+  data: IData[] = [];
+
+  constructor(private http: HttpClient, private dataServ: DataServiceService) {
+    this.getData();
   }
 
-  
-  getData(){
-    this.dataServ.GetData().subscribe((res)=>{
-      this.data = res;
+
+  getData() {
+    this.dataServ.GetData().subscribe((res) => {
+      this.data = res.data;
+      console.log('Server response: ', res);
+      console.log('Data caught: ', this.data);
     })
-       
-   
+
+
   }
 
 }
