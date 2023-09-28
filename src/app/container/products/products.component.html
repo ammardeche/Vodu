@@ -1,0 +1,22 @@
+
+        <div class="card  px-3 py-2 rounded-lg bg-white flex flex-col gap-2 ">
+            <!-- image + price -->
+            <div class="image mb-4 relative flex flex-row justify-center overflow-hidden">
+                <img class="w-full h-auto" src={{product?.image}} alt="">
+                <div class="price  font-bold text-lg rounded-full">
+                    <p class="py-6">{{product?.price | currency }}</p>
+                </div>
+            </div>
+            <!-- title + desc -->
+            <div class="info flex flex-col gap-3 ">
+                    <p class="title font-bold text-sm">{{product?.title}}</p>
+                    <p class="desc text-xs text-gray-500 text-center">
+                        {{product?.description}}
+                    </p>
+            </div>
+
+            <!-- category -->
+            <div class="mt-10">
+                <p class="text-xs"><span class="font-bold">category</span> : {{product?.category}} </p>
+            </div>
+        </div>

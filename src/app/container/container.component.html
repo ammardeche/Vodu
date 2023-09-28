@@ -1,0 +1,7 @@
+<app-searche></app-searche>
+<app-categories></app-categories>
+<section class="container pt-14">
+    <div class="grid md:grid-cols-4 grid-cols-1 gap-4 " >
+        <app-products [product]="item" *ngFor="let item of products" ></app-products>
+    </div>
+</section>
